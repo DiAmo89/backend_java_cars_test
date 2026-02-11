@@ -8,8 +8,8 @@
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Copy string literal text
             to the clipboard
         </property>
-        <property name="hibernate.connection.username">postgres</property>
-        <property name="hibernate.connection.password">538793</property>
+        <property name="hibernate.connection.username">your name</property>
+        <property name="hibernate.connection.password">your password</property>
 
         <mapping resource="Car.xml"/>
     </session-factory>
