@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<!-- 
+SETUP INSTRUCTIONS:
+1. Copy this file to postgres_config.xml
+2. Update username and password with your actual PostgreSQL credentials
+3. Never commit postgres_config.xml to Git (it's in .gitignore)
+-->
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/db_connection_java_test</property>
+        
+        <!-- TODO: Update these with your PostgreSQL credentials -->
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">YOUR_PASSWORD_HERE</property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Entity mappings -->
+        <mapping resource="Car.xml"/>
+    </session-factory>
+</hibernate-configuration>
